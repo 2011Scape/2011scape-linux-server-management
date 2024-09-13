@@ -1,3 +1,5 @@
+Sure, we can specify the game and file-server repositories as submodules when cloning the main repository. Here's the updated README with the changes:
+
 # 2011Scape Game Server Management
 
 This repository contains scripts for managing the 2011Scape game server and file server. The scripts are installed in the `/opt/2011Scape` directory.
@@ -30,23 +32,18 @@ sudo apt install git -y
 
 ## Setup
 
-1. Clone the server management repository:
+1. Clone the server management repository with the game and file-server submodules:
 
 ```bash
-sudo git clone https://github.com/2011Scape/2011scape-linux-server-management.git /opt/2011Scape
+sudo git clone --recursive=https://github.com/2011Scape/game.git https://github.com/2011Scape/file-server.git https://github.com/2011Scape/2011scape-linux-server-management.git /opt/2011Scape
 ```
+
+This command will clone the server management repository and automatically initialize and update the game and file-server submodules.
 
 2. Ensure that the scripts are executable by running the following command:
 
 ```bash
 sudo chmod +x /opt/2011Scape/*.sh
-```
-
-3. Clone the game and file-server repositories:
-
-```bash
-sudo git clone https://github.com/2011Scape/game.git /opt/2011Scape/game
-sudo git clone https://github.com/2011Scape/file-server.git /opt/2011Scape/file-server
 ```
 
 ## Starting the Game Server

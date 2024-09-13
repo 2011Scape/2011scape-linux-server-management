@@ -1,0 +1,2 @@
+# 2011scape-linux-server-management
+ This repository contains a set of Bash scripts designed to simplify the management and operations of the 2011Scape game server and file server. By using these scripts, server administrators can easily manage the 2011Scape game server and file server without the need for manual intervention or complex commands. The scripts are designed to be user-friendly and can be easily integrated into server management workflows.

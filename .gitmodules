@@ -1,0 +1,6 @@
+[submodule "game"]
+	path = game
+	url = https://github.com/2011Scape/game.git
+[submodule "file-server"]
+	path = file-server
+	url = https://github.com/2011Scape/file-server.git

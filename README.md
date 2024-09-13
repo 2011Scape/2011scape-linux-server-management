@@ -1,6 +1,32 @@
 # 2011Scape Game Server Management
-## Linux/Ubuntu 22.04 LTS
-This repository contains scripts for managing the 2011Scape game server and file server in Linux Server CLI environment. The scripts are installed in the `/opt/2011Scape` directory.
+
+This repository contains scripts for managing the 2011Scape game server and file server. The scripts are installed in the `/opt/2011Scape` directory.
+
+## Prerequisites
+
+Before using these scripts, you need to install the following dependencies:
+
+### Install OpenJDK 11
+
+```bash
+sudo apt update
+sudo apt install openjdk-11-jdk -y
+```
+
+### Install Gradle 7.2
+
+```bash
+sudo mkdir /opt/gradle
+sudo wget https://services.gradle.org/distributions/gradle-7.2-bin.zip -P /tmp
+sudo unzip -d /opt/gradle /tmp/gradle-7.2-bin.zip
+sudo ln -s /opt/gradle/gradle-7.2/bin/gradle /usr/bin/gradle
+```
+
+### Install Git
+
+```bash
+sudo apt install git -y
+```
 
 ## Setup
 

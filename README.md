@@ -30,10 +30,23 @@ sudo apt install git -y
 
 ## Setup
 
-1. Ensure that the scripts are executable by running the following command:
+1. Clone the server management repository:
 
 ```bash
-chmod +x /opt/2011Scape/*.sh
+sudo git clone https://github.com/2011Scape/2011scape-linux-server-management.git /opt/2011Scape
+```
+
+2. Ensure that the scripts are executable by running the following command:
+
+```bash
+sudo chmod +x /opt/2011Scape/*.sh
+```
+
+3. Clone the game and file-server repositories:
+
+```bash
+sudo git clone https://github.com/2011Scape/game.git /opt/2011Scape/game
+sudo git clone https://github.com/2011Scape/file-server.git /opt/2011Scape/file-server
 ```
 
 ## Starting the Game Server

@@ -1,5 +1,3 @@
-You're right, my previous instructions were incorrect. Here's the updated README with the correct way to clone the main repository and initialize the game and file-server submodules:
-
 # 2011Scape Game Server Management
 
 This repository contains scripts for managing the 2011Scape game server and file server. The scripts are installed in the `/opt/2011Scape` directory.

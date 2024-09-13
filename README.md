@@ -1,5 +1,3 @@
-Sure, we can specify the game and file-server repositories as submodules when cloning the main repository. Here's the updated README with the changes:
-
 # 2011Scape Game Server Management
 
 This repository contains scripts for managing the 2011Scape game server and file server. The scripts are installed in the `/opt/2011Scape` directory.

@@ -64,9 +64,47 @@ To start the file server, run the `file-server.sh` script:
 
 This script will start a new `screen` session named "file-server" and run the file server in that session. The file server will be started in the `/opt/2011Scape/file-server/` directory, and the `./gradlew run` command will be executed.
 
+## Updating the Game Server
+
+To update the game server, follow these steps:
+
+1. Run the `backup.sh` script to create a backup of the player files, cache, and xteas:
+
+```bash
+/opt/2011Scape/backup.sh
+```
+
+2. Run the `update-game.sh` script to update the game server:
+
+```bash
+/opt/2011Scape/update-game.sh
+```
+
+This script will attempt to compile the updated game server code. If there are any issues with compiling, follow these steps:
+
+- Remove the existing `game` directory:
+
+```bash
+sudo rm -rf /opt/2011Scape/game
+```
+
+- Re-clone the `game` repository:
+
+```bash
+sudo git clone https://github.com/2011Scape/game.git /opt/2011Scape/game
+```
+
+- Run the `restore.sh` script to restore the player files, cache, and xteas from the backup:
+
+```bash
+/opt/2011Scape/restore.sh
+```
+
+3. The `restart.sh` script will run automatically after a successful update to restart the game server.
+
 ## Restarting the Game Server
 
-To restart the game server, run the `restart.sh` script:
+To restart the game server manually, run the `restart.sh` script:
 
 ```bash
 /opt/2011Scape/restart.sh

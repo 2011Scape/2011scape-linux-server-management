@@ -1,5 +1,3 @@
-Sure, here's a README in Markdown format:
-
 # 2011Scape Game Server Management
 ## Linux/Ubuntu 22.04 LTS
 This repository contains scripts for managing the 2011Scape game server and file server in Linux Server CLI environment. The scripts are installed in the `/opt/2011Scape` directory.

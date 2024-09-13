@@ -1,3 +1,5 @@
+You're right, my previous instructions were incorrect. Here's the updated README with the correct way to clone the main repository and initialize the game and file-server submodules:
+
 # 2011Scape Game Server Management
 
 This repository contains scripts for managing the 2011Scape game server and file server. The scripts are installed in the `/opt/2011Scape` directory.
@@ -30,13 +32,11 @@ sudo apt install git -y
 
 ## Setup
 
-1. Clone the server management repository with the game and file-server submodules:
+1. Clone the server management repository with the `--recursive` option to automatically initialize and clone the submodules:
 
 ```bash
-sudo git clone --recursive=https://github.com/2011Scape/game.git https://github.com/2011Scape/file-server.git https://github.com/2011Scape/2011scape-linux-server-management.git /opt/2011Scape
+sudo git clone --recursive https://github.com/2011Scape/2011scape-linux-server-management.git /opt/2011Scape
 ```
-
-This command will clone the server management repository and automatically initialize and update the game and file-server submodules.
 
 2. Ensure that the scripts are executable by running the following command:
 
@@ -88,10 +88,11 @@ This script will attempt to compile the updated game server code. If there are a
 sudo rm -rf /opt/2011Scape/game
 ```
 
-- Re-clone the `game` repository:
+- Re-clone the `game` submodule:
 
 ```bash
-sudo git clone https://github.com/2011Scape/game.git /opt/2011Scape/game
+cd /opt/2011Scape
+sudo git submodule update --init --recursive
 ```
 
 - Run the `restore.sh` script to restore the player files, cache, and xteas from the backup:
